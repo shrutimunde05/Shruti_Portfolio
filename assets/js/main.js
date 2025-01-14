@@ -26,7 +26,32 @@
 			$('.spinner').fadeOut();
 			$('.preloader').delay(350).fadeOut('slow'); 
 		/*END PRELOADER JS*/
+    
+  // Ensure the button is selected by its ID
+const downloadCv = document.getElementById("download-cv");
 
+downloadCv.addEventListener("click", (e) => {
+  // Prevent the default action of the <a> tag
+  e.preventDefault();
+
+  // Create a temporary <a> element to trigger the download
+  const aElement = document.createElement("a");
+
+  // Set the file name and path for the download
+  aElement.setAttribute("download", "S temporary resume.pdf");
+  aElement.setAttribute("href", "assets/S temporary resume.pdf");  // Update to point to the 'assets' folder
+
+  // Append the element to the body (necessary for Firefox to trigger the click event)
+  document.body.appendChild(aElement);
+
+  // Trigger the download by programmatically clicking the link
+  aElement.click();
+
+  // Remove the temporary <a> element after the click (clean up)
+  document.body.removeChild(aElement);
+});
+
+    
 		/*START MENU JS*/		
 			 if ($(window).scrollTop() > 200) {
               $('.fixed-top').addClass('menu-bg');
