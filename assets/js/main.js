@@ -38,8 +38,8 @@ downloadCv.addEventListener("click", (e) => {
   const aElement = document.createElement("a");
 
   // Set the file name and path for the download
-  aElement.setAttribute("download", "S temporary resume.pdf");
-  aElement.setAttribute("href", "assets/S temporary resume.pdf");  // Update to point to the 'assets' folder
+  aElement.setAttribute("download", "Download CV.pdf");
+  aElement.setAttribute("href", "assets/Download CV.pdf");  // Update to point to the 'assets' folder
 
   // Append the element to the body (necessary for Firefox to trigger the click event)
   document.body.appendChild(aElement);

@@ -578,75 +578,87 @@ a.back-to-top:focus {
 /* ==========================================================================
 04. Start About Area
 ========================================================================== */
-.about-content {
-  margin-top: 15px;
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.about-image img {
-  border-radius: 0px;
-  border: 10px solid #ff0;
-  padding: 8px 8px 8px 8px;
-  margin-top: 25px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+/* Body and Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0e0d0d;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
-.about-content h3 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #222;
+
+/* About Me Section */
+.about-me {
+  background-color: #000000;
+  padding: 40px 20px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
 }
-.dark_bg .about-content h3 {
-  color: #fff;
+
+.about-me h1 {
+  font-size: 2.5rem;
+  color: rgb(255, 196, 0);;
+  margin-bottom: 20px;
 }
-.about-content h3 span {
-  margin-left: 10px;
-  color: #ff0;
+
+.about-me p {
+  font-size: 1rem;
+  color: #fcfcfc;
+  margin-bottom: 20px;
 }
-.dark_bg .about-content p {
-  color: #fff;
-}
-.profile-wrapper {
-  padding: 45px 0;
-}
-.profile-wrapper .btn {
-  margin: 10px 10px 0px 0px;
-}
-.profile-wrapper .btn i {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.about-profile {
-  position: relative;
-  margin: 20px 0 20px 0;
-}
-.about-profile .pro-title {
-  font-weight: 600;
-  position: relative;
-  width: 128px;
-  display: inline-block;
+
+.about-me h2 {
+  font-size: 1.5rem;
+  color: rgb(242, 240, 231);;
   margin-bottom: 10px;
-  color: #222;
 }
-.dark_bg .about-profile .pro-title {
-  color: #fff;
+
+.about-me ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
-.about-profile .pro-detail {
-  color: #333333;
+
+.about-me ul li {
+  font-size: 1rem;
+  color: rgb(255, 233, 160);;
+  margin-bottom: 10px;
 }
-.dark_bg .about-profile .pro-detail {
-  color: #fff;
+
+.about-me strong {
+  color: rgb(245, 160, 173);;
 }
-.about-profile .pro-title:after {
-  position: absolute;
-  content: ":";
-  color: #fff;
-  font-size: 14px;
-  left: 88px;
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .about-me {
+      padding: 30px 15px;
+  }
+  
+  .about-me h1 {
+      font-size: 2rem;
+  }
+  
+  .about-me h2 {
+      font-size: 1.3rem;
+  }
+  
+  .about-me p, .about-me ul li {
+      font-size: 0.95rem;
+  }
 }
-.about-profile .admin-sign {
-  position: absolute;
-  right: 45px;
-  bottom: 10px;
-}
+
 
 /* ==========================================================================
 05. Start Service Area
